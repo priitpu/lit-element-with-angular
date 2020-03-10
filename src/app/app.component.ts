@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Directive, forwardRef } from '@angular/core';
+import { FormBuilder, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  constructor(
+    private fb: FormBuilder,
+  ) {
+  }
+  public form = this.fb.group({
+    input: [''],
+  });
   title = 'lit-element-with-angular';
 }

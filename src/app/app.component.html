@@ -1,4 +1,8 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<t-button>Label</t-button>
-
+<form [formGroup]="form">
+  <t-input appCustomInput [formControl]="form.controls.input"></t-input>
+</form>
+<t-button>
+  Lisa
+</t-button>
+{{form.value | json}}
 <router-outlet></router-outlet>
