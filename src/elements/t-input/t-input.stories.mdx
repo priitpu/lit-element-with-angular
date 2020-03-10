@@ -1,0 +1,19 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+import './t-input.ts';
+// import '../t-icon/t-icon.ts'
+
+<Meta title="Inputs|Text" component='t-input' />
+
+# Inputs
+
+## Text input
+
+<Preview>
+  <Story name="with label">
+    {() => html`
+      <t-input theme="link">Label</t-input>
+    `}
+  </Story>
+</Preview>
+

@@ -2,25 +2,6 @@
   "version": "experimental",
   "tags": [
     {
-      "name": "t-icon",
-      "path": "./src/elements/t-icon/t-icon.ts",
-      "attributes": [
-        {
-          "name": "glyph",
-          "type": "string",
-          "default": "\"info\""
-        }
-      ],
-      "properties": [
-        {
-          "name": "glyph",
-          "attribute": "glyph",
-          "type": "string",
-          "default": "\"info\""
-        }
-      ]
-    },
-    {
       "name": "t-button",
       "path": "./src/elements/t-button/t-button.ts",
       "attributes": [
@@ -46,6 +27,11 @@
           "name": "iconRight",
           "type": "string",
           "default": "\"\""
+        },
+        {
+          "name": "iconOnly",
+          "type": "boolean",
+          "default": "false"
         }
       ],
       "properties": [
@@ -76,6 +62,50 @@
           "attribute": "iconRight",
           "type": "string",
           "default": "\"\""
+        },
+        {
+          "name": "iconOnly",
+          "attribute": "iconOnly",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "t-icon",
+      "path": "./src/elements/t-icon/t-icon.ts",
+      "attributes": [
+        {
+          "name": "glyph",
+          "type": "string",
+          "default": "\"info\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "glyph",
+          "attribute": "glyph",
+          "type": "string",
+          "default": "\"info\""
+        }
+      ]
+    },
+    {
+      "name": "t-input",
+      "path": "./src/elements/t-input/t-input.ts",
+      "attributes": [
+        {
+          "name": "glyph",
+          "type": "string",
+          "default": "\"info\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "glyph",
+          "attribute": "glyph",
+          "type": "string",
+          "default": "\"info\""
         }
       ]
     }
