@@ -32,7 +32,7 @@ export class TButton extends LitElement {
       <label>
         <span><slot></slot></span>
         <input
-          value=${this.inputValue}
+          .value=${this.inputValue}
           @keyup=${(e: any) => { this.valueChanged(e) }}
           @change=${(e: any) => { this.valueChanged(e) }}
           type="text"
