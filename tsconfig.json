@@ -21,6 +21,6 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": ["src/**/*", "index.js"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "build", "scripts"]
 }
