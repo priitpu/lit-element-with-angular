@@ -1,21 +1,3 @@
-"use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
-    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
-    return cooked;
-};
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -25,28 +7,79 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var lit_element_1 = require("lit-element");
-var class_map_1 = require("lit-html/directives/class-map");
-var TButton = /** @class */ (function (_super) {
-    __extends(TButton, _super);
-    function TButton() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.theme = 'default';
-        _this.iconLeft = '';
-        _this.iconRight = '';
-        _this.iconOnly = false;
-        _this.classes = {};
-        return _this;
+import { LitElement, html, customElement, property, css } from "lit-element";
+import { classMap } from "lit-html/directives/class-map";
+let TButton = class TButton extends LitElement {
+    constructor() {
+        super(...arguments);
+        this.theme = 'default';
+        this.iconLeft = '';
+        this.iconRight = '';
+        this.iconOnly = false;
+        this.classes = {};
     }
-    Object.defineProperty(TButton, "styles", {
-        get: function () {
-            return lit_element_1.css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n      .btn {\n        box-sizing: border-box;\n        margin: 0;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        border-radius: 4px;\n        font-size: 14px;\n        font-weight: 500;\n        min-height: 32px;\n        min-width: 96px;\n      }\n      .btn:hover {\n        cursor: pointer;\n      }\n      .btn--sm {\n        min-height: 28px;\n      }\n      .btn--lg {\n        min-height: 40px;\n      }\n      .btn--primary {\n        background-color: #ec1a2e;\n        color: #ffffff;\n        border: 0;\n      }\n      .btn--primary:hover {\n        background-color: #a9000f;\n      }\n      .btn--primary:active {\n        background-color: #76000a;\n      }\n      .btn--primary:disabled {\n        background-color: #ccd9e0;\n        color: #575a65;\n      }\n      .btn--secondary {\n        background-color: #ffffff;\n        color: #ec1a2e;\n        border: 2px solid #ec1a2e;\n      }\n      .btn--link {\n        padding: 0;\n        color: #ec1a2e;\n        border: 0;\n        min-width: 0;\n      }\n      .btn--icon {\n        padding: 0 10px;\n        min-width: 0;\n      }\n      .l-icon {\n        margin-right: 10px;\n      }\n      .r-icon {\n        margin-left: 10px;\n      }\n    "], ["\n      .btn {\n        box-sizing: border-box;\n        margin: 0;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        border-radius: 4px;\n        font-size: 14px;\n        font-weight: 500;\n        min-height: 32px;\n        min-width: 96px;\n      }\n      .btn:hover {\n        cursor: pointer;\n      }\n      .btn--sm {\n        min-height: 28px;\n      }\n      .btn--lg {\n        min-height: 40px;\n      }\n      .btn--primary {\n        background-color: #ec1a2e;\n        color: #ffffff;\n        border: 0;\n      }\n      .btn--primary:hover {\n        background-color: #a9000f;\n      }\n      .btn--primary:active {\n        background-color: #76000a;\n      }\n      .btn--primary:disabled {\n        background-color: #ccd9e0;\n        color: #575a65;\n      }\n      .btn--secondary {\n        background-color: #ffffff;\n        color: #ec1a2e;\n        border: 2px solid #ec1a2e;\n      }\n      .btn--link {\n        padding: 0;\n        color: #ec1a2e;\n        border: 0;\n        min-width: 0;\n      }\n      .btn--icon {\n        padding: 0 10px;\n        min-width: 0;\n      }\n      .l-icon {\n        margin-right: 10px;\n      }\n      .r-icon {\n        margin-left: 10px;\n      }\n    "])));
-        },
-        enumerable: true,
-        configurable: true
-    });
-    TButton.prototype.render = function () {
+    static get styles() {
+        return css `
+      .btn {
+        box-sizing: border-box;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 500;
+        min-height: 32px;
+        min-width: 96px;
+      }
+      .btn:hover {
+        cursor: pointer;
+      }
+      .btn--sm {
+        min-height: 28px;
+      }
+      .btn--lg {
+        min-height: 40px;
+      }
+      .btn--primary {
+        background-color: #ec1a2e;
+        color: #ffffff;
+        border: 0;
+      }
+      .btn--primary:hover {
+        background-color: #a9000f;
+      }
+      .btn--primary:active {
+        background-color: #76000a;
+      }
+      .btn--primary:disabled {
+        background-color: #ccd9e0;
+        color: #575a65;
+      }
+      .btn--secondary {
+        background-color: #ffffff;
+        color: #ec1a2e;
+        border: 2px solid #ec1a2e;
+      }
+      .btn--link {
+        padding: 0;
+        color: #ec1a2e;
+        border: 0;
+        min-width: 0;
+      }
+      .btn--icon {
+        padding: 0 10px;
+        min-width: 0;
+      }
+      .l-icon {
+        margin-right: 10px;
+      }
+      .r-icon {
+        margin-left: 10px;
+      }
+    `;
+    }
+    render() {
         this.classes = {
             'btn': true,
             'btn--sm': this.size === 'small',
@@ -56,37 +89,41 @@ var TButton = /** @class */ (function (_super) {
             'btn--link': this.theme === 'link',
             'btn--icon': this.iconOnly,
         };
-        return lit_element_1.html(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n      <button class=\"", "\">\n        <span class=\"l-icon\"><slot name=\"l-icon\"></slot></span>\n        <span><slot></slot></span>\n        <span class=\"r-icon\"><slot name=\"r-icon\"></slot></span>\n      </button>\n    "], ["\n      <button class=\"", "\">\n        <span class=\"l-icon\"><slot name=\"l-icon\"></slot></span>\n        <span><slot></slot></span>\n        <span class=\"r-icon\"><slot name=\"r-icon\"></slot></span>\n      </button>\n    "])), class_map_1.classMap(this.classes));
-    };
-    __decorate([
-        lit_element_1.property({ type: String }),
-        __metadata("design:type", String)
-    ], TButton.prototype, "label", void 0);
-    __decorate([
-        lit_element_1.property({ type: String }),
-        __metadata("design:type", String)
-    ], TButton.prototype, "size", void 0);
-    __decorate([
-        lit_element_1.property({ type: String }),
-        __metadata("design:type", String)
-    ], TButton.prototype, "theme", void 0);
-    __decorate([
-        lit_element_1.property({ type: String }),
-        __metadata("design:type", String)
-    ], TButton.prototype, "iconLeft", void 0);
-    __decorate([
-        lit_element_1.property({ type: String }),
-        __metadata("design:type", String)
-    ], TButton.prototype, "iconRight", void 0);
-    __decorate([
-        lit_element_1.property({ type: Boolean }),
-        __metadata("design:type", Boolean)
-    ], TButton.prototype, "iconOnly", void 0);
-    TButton = __decorate([
-        lit_element_1.customElement("t-button")
-    ], TButton);
-    return TButton;
-}(lit_element_1.LitElement));
-exports.TButton = TButton;
-var templateObject_1, templateObject_2;
+        return html `
+      <button class="${classMap(this.classes)}">
+        <span class="l-icon"><slot name="l-icon"></slot></span>
+        <span><slot></slot></span>
+        <span class="r-icon"><slot name="r-icon"></slot></span>
+      </button>
+    `;
+    }
+};
+__decorate([
+    property({ type: String }),
+    __metadata("design:type", String)
+], TButton.prototype, "label", void 0);
+__decorate([
+    property({ type: String }),
+    __metadata("design:type", String)
+], TButton.prototype, "size", void 0);
+__decorate([
+    property({ type: String }),
+    __metadata("design:type", String)
+], TButton.prototype, "theme", void 0);
+__decorate([
+    property({ type: String }),
+    __metadata("design:type", String)
+], TButton.prototype, "iconLeft", void 0);
+__decorate([
+    property({ type: String }),
+    __metadata("design:type", String)
+], TButton.prototype, "iconRight", void 0);
+__decorate([
+    property({ type: Boolean }),
+    __metadata("design:type", Boolean)
+], TButton.prototype, "iconOnly", void 0);
+TButton = __decorate([
+    customElement("t-button")
+], TButton);
+export { TButton };
 //# sourceMappingURL=t-button.js.map
