@@ -72,27 +72,42 @@
       ]
     },
     {
-      "name": "t-icon",
-      "path": "./src/elements/t-icon/t-icon.ts",
+      "name": "t-input",
+      "path": "./src/elements/t-input/t-input.ts",
       "attributes": [
         {
-          "name": "glyph",
+          "name": "size",
           "type": "string",
-          "default": "\"info\""
+          "default": "\"md\""
+        },
+        {
+          "name": "inputValue",
+          "type": "string",
+          "default": "\"\""
         }
       ],
       "properties": [
         {
-          "name": "glyph",
-          "attribute": "glyph",
+          "name": "size",
+          "attribute": "size",
           "type": "string",
-          "default": "\"info\""
+          "default": "\"md\""
+        },
+        {
+          "name": "inputValue",
+          "attribute": "inputValue",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "value",
+          "type": "string"
         }
       ]
     },
     {
-      "name": "t-input",
-      "path": "./src/elements/t-input/t-input.ts",
+      "name": "t-icon",
+      "path": "./src/elements/t-icon/t-icon.ts",
       "attributes": [
         {
           "name": "glyph",
