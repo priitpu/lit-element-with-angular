@@ -1,0 +1,49 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+import './t-button.ts';
+import '../t-icon/t-icon.ts'
+
+<Meta title="Buttons|Secondary" component='t-button' />
+
+# Sekundaarsed nupud
+
+ Siia veel disainerilt head teksti
+
+<Preview>
+  <Story name="with label">
+    {() => html`
+      <t-button theme="secondary">Label</t-button>
+    `}
+  </Story>
+  <Story name="with label and left icon">
+    {() => html`
+      <t-button theme="secondary">
+        <t-icon slot="l-icon" glyph="info"></t-icon>
+        Label
+      </t-button>
+    `}
+  </Story>
+  <Story name="with label and right icon">
+    {() => html`
+      <t-button theme="secondary">Label</t-button>
+    `}
+  </Story>
+  <Story name="with label and both icons">
+    {() => html`
+      <t-button theme="secondary">Label</t-button>
+    `}
+  </Story>
+  <Story name="icon without label">
+    {() => html`
+      <t-button theme="secondary" iconOnly="true">
+        <t-icon glyph="info"></t-icon>
+      </t-button>
+    `}
+  </Story>
+  <Story name="icon with label">
+    {() => html`
+      <t-button theme="secondary">Label</t-button>
+    `}
+  </Story>
+</Preview>
+

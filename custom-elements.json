@@ -1,0 +1,83 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "t-icon",
+      "path": "./src/elements/t-icon/t-icon.ts",
+      "attributes": [
+        {
+          "name": "glyph",
+          "type": "string",
+          "default": "\"info\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "glyph",
+          "attribute": "glyph",
+          "type": "string",
+          "default": "\"info\""
+        }
+      ]
+    },
+    {
+      "name": "t-button",
+      "path": "./src/elements/t-button/t-button.ts",
+      "attributes": [
+        {
+          "name": "label",
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "type": "string"
+        },
+        {
+          "name": "theme",
+          "type": "string",
+          "default": "\"default\""
+        },
+        {
+          "name": "iconLeft",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconRight",
+          "type": "string",
+          "default": "\"\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "label",
+          "attribute": "label",
+          "type": "string"
+        },
+        {
+          "name": "size",
+          "attribute": "size",
+          "type": "string"
+        },
+        {
+          "name": "theme",
+          "attribute": "theme",
+          "type": "string",
+          "default": "\"default\""
+        },
+        {
+          "name": "iconLeft",
+          "attribute": "iconLeft",
+          "type": "string",
+          "default": "\"\""
+        },
+        {
+          "name": "iconRight",
+          "attribute": "iconRight",
+          "type": "string",
+          "default": "\"\""
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+import './t-button.ts';
+import '../t-icon/t-icon.ts'
+
+<Meta title="Buttons|Link" component='t-button' />
+
+# Link button
+
+<Preview>
+  <Story name="with label">
+    {() => html`
+      <t-button theme="link">Label</t-button>
+    `}
+  </Story>
+  <Story name="with label and left icon">
+    {() => html`
+      <t-button theme="link">
+        <t-icon slot="l-icon" glyph="delete"></t-icon>
+        Label</t-button>
+    `}
+  </Story>
+  <Story name="with label and right icon">
+    {() => html`
+      <t-button theme="link">Label</t-button>
+    `}
+  </Story>
+  <Story name="with label and both icons">
+    {() => html`
+      <t-button theme="link">Label</t-button>
+    `}
+  </Story>
+  <Story name="icon without label">
+    {() => html`
+      <t-button theme="link">
+        <t-icon glpyh="info"></t-icon>
+      </t-button>
+    `}
+  </Story>
+  <Story name="icon with label">
+    {() => html`
+      <t-button theme="link">Label</t-button>
+    `}
+  </Story>
+</Preview>

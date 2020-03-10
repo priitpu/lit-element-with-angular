@@ -1,0 +1,48 @@
+{
+  "name": "lit-element-web-components",
+  "version": "0.0.1",
+  "description": "LitElement Web Components",
+  "main": "index.js",
+  "dependencies": {
+    "@material/mwc-icon": "^0.13.0",
+    "@storybook/preset-typescript": "^2.1.0",
+    "lit-element": "^2.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@storybook/addon-docs": "^5.3.14",
+    "@storybook/addon-info": "^5.3.14",
+    "@storybook/web-components": "^5.3.14",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-lit": "^1.2.0",
+    "react": "^16.13.0",
+    "react-docgen-typescript-loader": "^3.6.0",
+    "react-is": "^16.13.0",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priitpu/lit-element-web-components.git"
+  },
+  "keywords": [
+    "LitElement",
+    "Web",
+    "Component",
+    "Javascript"
+  ],
+  "author": "Priit Puru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/priitpu/lit-element-web-components/issues"
+  },
+  "homepage": "https://github.com/priitpu/lit-element-web-components#readme"
+}

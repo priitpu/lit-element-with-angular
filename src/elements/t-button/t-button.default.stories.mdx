@@ -1,0 +1,155 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+import './t-button.ts';
+import '../t-icon/t-icon.ts'
+
+<Meta title="Buttons|Primary" component='t-button' />
+
+# Primaarsed nupud
+
+ Primaarne nupp peaks alati tähistama tegevusvoo soovitud tulemust.
+
+ N: otsingu puhul otsingu päringu tegemine, andmete sisestamisel salvestamine jne. Nupu nimetused peavad arusaadavalt kommunikeerima tegevust, mida kasutajad saavad teha.
+ Nimetused peavad olema võimalikult lühikesed ja konkreetsed. Nuppude puhul oleme ära lahendanud enam levinud teksti ja ikooni kombinatsioonid
+
+<Preview>
+  <Story name="with label">
+    {() => html`
+      <t-button>Label</t-button>
+    `}
+  </Story>
+  <Story name="with label and left icon">
+    {() => html`
+      <t-button>
+        <t-icon slot="l-icon" glyph="info"></t-icon>
+        Label
+      </t-button>
+    `}
+  </Story>
+  <Story name="with label and right icon">
+    {() => html`
+      <t-button>
+        Label
+        <t-icon slot="r-icon" glyph="arrow_drop_down"></t-icon>
+      </t-button>
+    `}
+  </Story>
+  <Story name="with label and both icons">
+    {() => html`
+      <t-button>
+        <t-icon slot="l-icon" glyph="info"></t-icon>
+        Label
+        <t-icon slot="r-icon" glyph="arrow_drop_down"></t-icon>
+      </t-button>
+    `}
+  </Story>
+  <Story name="icon without label">
+    {() => html`
+      <t-button iconOnly="true">
+        <t-icon glyph="info"></t-icon>
+      </t-button>
+    `}
+  </Story>
+  <Story name="icon with label">
+    {() => html`
+      <t-button>Label</t-button>
+    `}
+  </Story>
+</Preview>
+
+Vaikimisi on kasutusel keskmise (32px) kõrgusega nupud. Allpool on ära toodud võimalikud alternatiivid, mida vastavalt vajadusele kasutada.
+Nuppude suurused laienevad kõikidele nuppude tüüpidele. Väiksemad nupud on mõeldud kasutamiseks mahukates vaadetes, kus on palju informatsiooni. N: tabeli rea lõpus.
+
+## Väikesed nupud
+
+<Preview>
+  <Story name="sm with label">
+    {() => html`
+      <t-button size="small">Label</t-button>
+    `}
+  </Story>
+  <Story name="sm with label and left icon">
+    {() => html`
+      <t-button size="small">
+        <t-icon slot="l-icon" glyph="info"></t-icon>
+        Label
+      </t-button>
+    `}
+  </Story>
+  <Story name="sm with label and right icon">
+    {() => html`
+      <t-button size="small">
+        Label
+        <t-icon slot="r-icon" glyph="arrow_drop_down"></t-icon>
+      </t-button>
+    `}
+  </Story>
+  <Story name="sm with label and both icons">
+    {() => html`
+      <t-button size="small">
+        <t-icon slot="l-icon" glyph="info"></t-icon>
+        Label
+        <t-icon slot="r-icon" glyph="arrow_drop_down"></t-icon>
+      </t-button>
+    `}
+  </Story>
+  <Story name="sm icon without label">
+    {() => html`
+      <t-button size="small" iconOnly="true">
+        <t-icon glyph="info"></t-icon>
+      </t-button>
+    `}
+  </Story>
+  <Story name="sm icon with label">
+    {() => html`
+      <t-button size="small">Label</t-button>
+    `}
+  </Story>
+</Preview>
+
+## Suured nupud
+
+<Preview>
+  <Story name="lg with label">
+    {() => html`
+      <t-button size="large">Label</t-button>
+    `}
+  </Story>
+  <Story name="lg with label and left icon">
+    {() => html`
+      <t-button size="large">
+        <t-icon slot="l-icon" glyph="info"></t-icon>
+        Label
+      </t-button>
+    `}
+  </Story>
+  <Story name="lg with label and right icon">
+    {() => html`
+      <t-button size="large">
+        Label
+        <t-icon slot="r-icon" glyph="arrow_drop_down"></t-icon>
+      </t-button>
+    `}
+  </Story>
+  <Story name="lg with label and both icons">
+    {() => html`
+      <t-button size="large">
+        <t-icon slot="l-icon" glyph="info"></t-icon>
+        Label
+        <t-icon slot="r-icon" glyph="arrow_drop_down"></t-icon>
+      </t-button>
+    `}
+  </Story>
+  <Story name="lg icon without label">
+    {() => html`
+      <t-button size="large" iconOnly="true">
+        <t-icon glyph="info"></t-icon>
+      </t-button>
+    `}
+  </Story>
+  <Story name="lg icon with label">
+    {() => html`
+      <t-button size="large">Label</t-button>
+    `}
+  </Story>
+</Preview>
