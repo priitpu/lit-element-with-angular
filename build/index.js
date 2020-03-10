@@ -3177,6 +3177,7 @@ let TButton$2 = class TButton extends LitElement {
   constructor() {
     super(...arguments);
     this.glyph = 'info';
+    this.inputValue = '';
   }
 
   static get styles() {
@@ -3187,11 +3188,27 @@ let TButton$2 = class TButton extends LitElement {
     `;
   }
 
+  set value(value) {
+    this.inputValue = value;
+  }
+
+  get value() {
+    return this.inputValue;
+  }
+
+  valueChanged(e) {
+    this.inputValue = e.target.value;
+    const event = new Event('change');
+    this.dispatchEvent(event);
+  }
+
   render() {
     return html`
       <label>
         <span><slot></slot></span>
-        <input type="text" />
+        <input value=${this.inputValue} @change=${e => {
+      this.valueChanged(e);
+    }} type="text" />
       </label>
     `;
   }
@@ -3201,6 +3218,10 @@ let TButton$2 = class TButton extends LitElement {
 __decorate$3([property({
   type: String
 }), __metadata$2("design:type", String)], TButton$2.prototype, "glyph", void 0);
+
+__decorate$3([property({
+  type: String
+}), __metadata$2("design:type", String)], TButton$2.prototype, "inputValue", void 0);
 
 TButton$2 = __decorate$3([customElement("t-input")], TButton$2);
 //# sourceMappingURL=index.js.map
