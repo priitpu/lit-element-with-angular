@@ -5,4 +5,4 @@ Web components using LitElement
 wca analyze src --format json --outFile custom-elements.json
 
 # transpile
-tsc
+tsc && rollup -c

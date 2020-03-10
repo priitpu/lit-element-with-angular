@@ -10,9 +10,37 @@ import './t-input.ts';
 ## Text input
 
 <Preview>
-  <Story name="with label">
+  <Story name="sm">
     {() => html`
-      <t-input theme="link">Label</t-input>
+      <t-input size="sm"></t-input>
+    `}
+  </Story>
+  <Story name="md">
+    {() => html`
+      <t-input></t-input>
+    `}
+  </Story>
+  <Story name="lg">
+    {() => html`
+      <t-input size="lg"></t-input>
+    `}
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="sm with label">
+    {() => html`
+      <t-input size="sm">?Label</t-input>
+    `}
+  </Story>
+  <Story name="md with label">
+    {() => html`
+      <t-input>?Label</t-input>
+    `}
+  </Story>
+  <Story name="lg with label">
+    {() => html`
+      <t-input size="lg">?Label</t-input>
     `}
   </Story>
 </Preview>

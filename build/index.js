@@ -3173,17 +3173,53 @@ var __decorate$3 = undefined && undefined.__decorate || function (decorators, ta
 var __metadata$2 = undefined && undefined.__metadata || function (k, v) {
   if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-let TButton$2 = class TButton extends LitElement {
+let TInput = class TInput extends LitElement {
   constructor() {
     super(...arguments);
-    this.glyph = 'info';
+    this.size = 'md';
     this.inputValue = '';
+    this.classes = {};
   }
 
   static get styles() {
     return css`
       :host {
         display: flex;
+      }
+      .t-input input {
+        box-sizing: border-box;
+        border-radius: 4px;
+        border: 1px solid #8A98A5;
+        padding: 8px;
+        font-size: 14px;
+        background-color: #ffffff;
+        height: 32px;
+      }
+      .t-input input:hover {
+        border: 1px solid #3F3F3F;
+        border-radius: 2px;
+      }
+      .t-input input:active {
+        box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.1);
+        border: 1px solid #2970B6;
+        border-radius: 4px;
+      }
+      .t-input input:focus {
+        border: 2px solid #2970B6;
+        border-radius: 4px;
+        outline: 0;
+      }
+      .t-input input:active:focus {
+        box-shadow: inset 0px 2px 2px rgba(0, 0, 0, 0.1);
+        border: 2px solid #009EE3;
+      }
+      .t-input--sm input {
+        padding: 4px 8px;
+        height: 28px;
+      }
+      .t-input--lg input {
+        padding: 12px 8px;
+        height: 40px;
       }
     `;
   }
@@ -3201,20 +3237,19 @@ let TButton$2 = class TButton extends LitElement {
   }
 
   valueChanged(e) {
-    console.log('koerajalad');
     this.inputValue = e.target.value;
     const event = new Event('input');
     this.dispatchEvent(event);
   }
 
-  updated() {
-    console.log('updated t-input');
-    return;
-  }
-
   render() {
+    this.classes = {
+      't-input': true,
+      't-input--sm': this.size === 'sm',
+      't-input--lg': this.size === 'lg'
+    };
     return html`
-      <label>
+      <label class=${classMap(this.classes)}>
         <span><slot></slot></span>
         <input
           .value=${this.inputValue}
@@ -3231,11 +3266,11 @@ let TButton$2 = class TButton extends LitElement {
 
 __decorate$3([property({
   type: String
-}), __metadata$2("design:type", String)], TButton$2.prototype, "glyph", void 0);
+}), __metadata$2("design:type", String)], TInput.prototype, "size", void 0);
 
 __decorate$3([property({
   type: String
-}), __metadata$2("design:type", String)], TButton$2.prototype, "inputValue", void 0);
+}), __metadata$2("design:type", String)], TInput.prototype, "inputValue", void 0);
 
-TButton$2 = __decorate$3([customElement("t-input")], TButton$2);
+TInput = __decorate$3([customElement("t-input")], TInput);
 //# sourceMappingURL=index.js.map
