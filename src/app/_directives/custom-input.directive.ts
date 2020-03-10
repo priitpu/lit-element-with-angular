@@ -30,13 +30,15 @@ export class CustomInputDirective implements ControlValueAccessor {
     }
   }
 
-  @HostListener('change', ['$event.target.value'])
+  @HostListener('input', ['$event.target.value'])
   listenForValueChange(value) {
     this.value = value;
   }
   writeValue(value) {
     if (value !== null) {
       this.value = value;
+    } else {
+      this.value = '';
     }
   }
 
