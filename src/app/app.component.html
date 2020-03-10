@@ -1,22 +1,9 @@
 <form [formGroup]="form">
-  <t-input appCustomInput [formControl]="form.controls.input"></t-input>
+  <t-input (keydown.enter)="addEl()" appCustomInput [formControl]="form.controls.input"></t-input>
+  <t-button (click)="addEl()">
+    Lisa
+  </t-button>
 </form>
-<t-button (click)="addEl()">
-  Lisa
-</t-button>
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th>Title</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let element of elementList; let i = index">
-      <td>{{i}}</td>
-      <td>{{element}}</td>
-    </tr>
-  </tbody>
-</table>
-{{form.value | json}}
-
+<div *ngFor="let element of elementList">
+  {{element}}
+</div>
