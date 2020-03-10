@@ -92,4 +92,119 @@
     exports.TButton = TButton;
     var templateObject_1, templateObject_2;
 
+    var __extends$1 = (undefined && undefined.__extends) || (function () {
+        var extendStatics = function (d, b) {
+            extendStatics = Object.setPrototypeOf ||
+                ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+                function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            return extendStatics(d, b);
+        };
+        return function (d, b) {
+            extendStatics(d, b);
+            function __() { this.constructor = d; }
+            d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+        };
+    })();
+    var __makeTemplateObject$1 = (undefined && undefined.__makeTemplateObject) || function (cooked, raw) {
+        if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+        return cooked;
+    };
+    var __decorate$1 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+        var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+        else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    var __metadata$1 = (undefined && undefined.__metadata) || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+    };
+    Object.defineProperty(exports, "__esModule", { value: true });
+    var lit_element_1$1 = require("lit-element");
+    require("@material/mwc-icon");
+    var TButton$1 = /** @class */ (function (_super) {
+        __extends$1(TButton, _super);
+        function TButton() {
+            var _this = _super !== null && _super.apply(this, arguments) || this;
+            _this.glyph = 'info';
+            return _this;
+        }
+        Object.defineProperty(TButton, "styles", {
+            get: function () {
+                return lit_element_1$1.css(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject$1(["\n      :host {\n        display: flex;\n      }\n    "], ["\n      :host {\n        display: flex;\n      }\n    "])));
+            },
+            enumerable: true,
+            configurable: true
+        });
+        TButton.prototype.render = function () {
+            return lit_element_1$1.html(templateObject_2$1 || (templateObject_2$1 = __makeTemplateObject$1(["\n      <mwc-icon>", "</mwc-icon>\n    "], ["\n      <mwc-icon>", "</mwc-icon>\n    "])), this.glyph);
+        };
+        __decorate$1([
+            lit_element_1$1.property({ type: String }),
+            __metadata$1("design:type", String)
+        ], TButton.prototype, "glyph", void 0);
+        TButton = __decorate$1([
+            lit_element_1$1.customElement("t-icon")
+        ], TButton);
+        return TButton;
+    }(lit_element_1$1.LitElement));
+    exports.TButton = TButton$1;
+    var templateObject_1$1, templateObject_2$1;
+
+    var __extends$2 = (undefined && undefined.__extends) || (function () {
+        var extendStatics = function (d, b) {
+            extendStatics = Object.setPrototypeOf ||
+                ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+                function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+            return extendStatics(d, b);
+        };
+        return function (d, b) {
+            extendStatics(d, b);
+            function __() { this.constructor = d; }
+            d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+        };
+    })();
+    var __makeTemplateObject$2 = (undefined && undefined.__makeTemplateObject) || function (cooked, raw) {
+        if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
+        return cooked;
+    };
+    var __decorate$2 = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+        var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+        if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+        else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+        return c > 3 && r && Object.defineProperty(target, key, r), r;
+    };
+    var __metadata$2 = (undefined && undefined.__metadata) || function (k, v) {
+        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+    };
+    Object.defineProperty(exports, "__esModule", { value: true });
+    var lit_element_1$2 = require("lit-element");
+    var TButton$2 = /** @class */ (function (_super) {
+        __extends$2(TButton, _super);
+        function TButton() {
+            var _this = _super !== null && _super.apply(this, arguments) || this;
+            _this.glyph = 'info';
+            return _this;
+        }
+        Object.defineProperty(TButton, "styles", {
+            get: function () {
+                return lit_element_1$2.css(templateObject_1$2 || (templateObject_1$2 = __makeTemplateObject$2(["\n      :host {\n        display: flex;\n      }\n    "], ["\n      :host {\n        display: flex;\n      }\n    "])));
+            },
+            enumerable: true,
+            configurable: true
+        });
+        TButton.prototype.render = function () {
+            return lit_element_1$2.html(templateObject_2$2 || (templateObject_2$2 = __makeTemplateObject$2(["\n      <label>\n        <span><slot></slot></span>\n        <input type=\"text\" />\n      </label>\n    "], ["\n      <label>\n        <span><slot></slot></span>\n        <input type=\"text\" />\n      </label>\n    "])));
+        };
+        __decorate$2([
+            lit_element_1$2.property({ type: String }),
+            __metadata$2("design:type", String)
+        ], TButton.prototype, "glyph", void 0);
+        TButton = __decorate$2([
+            lit_element_1$2.customElement("t-input")
+        ], TButton);
+        return TButton;
+    }(lit_element_1$2.LitElement));
+    exports.TButton = TButton$2;
+    var templateObject_1$2, templateObject_2$2;
+
 }());
