@@ -1,15 +1,4 @@
-import {
-  Directive,
-  OnInit,
-  forwardRef,
-  HostBinding,
-  ChangeDetectionStrategy,
-  Input,
-  Output,
-  EventEmitter,
-  ElementRef,
-  HostListener
-} from '@angular/core';
+import { Directive, forwardRef, ElementRef, HostListener } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Directive({
@@ -23,17 +12,13 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ]
 })
 export class CustomInputDirective implements ControlValueAccessor {
-
-  constructor(
-    private elementRef: ElementRef,
-  ) {}
+  constructor(private elementRef: ElementRef) {}
   private inputValue: string;
   onChange: any = () => {};
   onTouched: any = () => {};
 
-
   get value() {
-    return this.inputValue;
+    return this.elementRef.nativeElement.value;
   }
 
   set value(val) {
@@ -45,12 +30,12 @@ export class CustomInputDirective implements ControlValueAccessor {
     }
   }
 
-  @HostListener('valueChange', ['$event.detail'])
+  @HostListener('change', ['$event.target.value'])
   listenForValueChange(value) {
     this.value = value;
   }
   writeValue(value) {
-    if (value) {
+    if (value !== null) {
       this.value = value;
     }
   }

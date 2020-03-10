@@ -11,8 +11,13 @@ export class AppComponent {
     private fb: FormBuilder,
   ) {
   }
+  public elementList = [];
   public form = this.fb.group({
     input: [''],
   });
-  title = 'lit-element-with-angular';
+
+  public addEl() {
+    this.elementList = [...this.elementList, this.form.value.input];
+    this.form.controls.input.reset();
+  }
 }

@@ -1,8 +1,22 @@
 <form [formGroup]="form">
   <t-input appCustomInput [formControl]="form.controls.input"></t-input>
 </form>
-<t-button>
+<t-button (click)="addEl()">
   Lisa
 </t-button>
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let element of elementList; let i = index">
+      <td>{{i}}</td>
+      <td>{{element}}</td>
+    </tr>
+  </tbody>
+</table>
 {{form.value | json}}
-<router-outlet></router-outlet>
+
