@@ -13,6 +13,7 @@ export class TGrid extends LitElement {
         display: grid;
         width: 100%;
         grid-template-columns: 1fr;
+        grid-gap: 16px;
       }
     `;
   }
