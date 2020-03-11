@@ -17,6 +17,9 @@ export class TCard extends LitElement {
         font-family: sans-serif;
         border-radius: 2px;
       }
+      .t-card-head {
+        margin-bottom: 18px;
+      }
       .t-card-head ::slotted(*) {
         font-size: 18px;
         line-height: 21px;
