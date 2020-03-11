@@ -77,12 +77,76 @@
       ]
     },
     {
+      "name": "t-card",
+      "path": "./src/elements/t-card/t-card.ts"
+    },
+    {
       "name": "t-button-group",
       "path": "./src/elements/t-button-group/t-button-group.ts"
     },
     {
-      "name": "t-card",
-      "path": "./src/elements/t-card/t-card.ts"
+      "name": "t-grid",
+      "path": "./src/elements/t-grid/t-grid.ts"
+    },
+    {
+      "name": "t-grid-cell",
+      "path": "./src/elements/t-grid-cell/t-grid-cell.ts",
+      "attributes": [
+        {
+          "name": "span",
+          "type": "string",
+          "default": "\"auto\""
+        },
+        {
+          "name": "justify",
+          "type": "string",
+          "default": "\"stretch\""
+        },
+        {
+          "name": "start",
+          "type": "string",
+          "default": "\"auto\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "span",
+          "attribute": "span",
+          "type": "string",
+          "default": "\"auto\""
+        },
+        {
+          "name": "justify",
+          "attribute": "justify",
+          "type": "string",
+          "default": "\"stretch\""
+        },
+        {
+          "name": "start",
+          "attribute": "start",
+          "type": "string",
+          "default": "\"auto\""
+        }
+      ]
+    },
+    {
+      "name": "t-grid-row",
+      "path": "./src/elements/t-grid-row/t-grid-row.ts",
+      "attributes": [
+        {
+          "name": "cols",
+          "type": "string",
+          "default": "\"12\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "cols",
+          "attribute": "cols",
+          "type": "string",
+          "default": "\"12\""
+        }
+      ]
     },
     {
       "name": "t-icon",
