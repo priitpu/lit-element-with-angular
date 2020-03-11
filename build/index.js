@@ -2967,6 +2967,23 @@ let TButton = class TButton extends LitElement {
 
   static get styles() {
     return css`
+      :host {
+        display: inline-flex;
+      }
+      :host-context(t-button-group):host(:not(:last-child):not(:first-child)) .btn {
+        border-radius: 0;
+      }
+      :host-context(t-button-group):host(:first-child:last-child) .btn {
+        border-radius: 4px;
+      }
+      :host-context(t-button-group):host(:first-child) .btn {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      :host-context(t-button-group):host(:last-child) .btn {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
       .btn {
         box-sizing: border-box;
         margin: 0;

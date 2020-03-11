@@ -77,6 +77,14 @@
       ]
     },
     {
+      "name": "t-button-group",
+      "path": "./src/elements/t-button-group/t-button-group.ts"
+    },
+    {
+      "name": "t-card",
+      "path": "./src/elements/t-card/t-card.ts"
+    },
+    {
       "name": "t-icon",
       "path": "./src/elements/t-icon/t-icon.ts",
       "attributes": [

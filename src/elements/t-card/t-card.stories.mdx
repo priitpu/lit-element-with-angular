@@ -1,0 +1,42 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { html } from 'lit-html';
+import './t-card.ts';
+
+<Meta title="Building Blocks|Card" component='t-card' />
+
+# Card
+
+<Preview>
+  <Story name="Base">
+    {() => html`
+      <t-card>
+        <h3 slot="t-card-head">Heading</h3>
+        <div>
+          <p>There is stuff in here, anything you want.</p>
+        </div>
+      </t-card>
+    `}
+  </Story>
+</Preview>
+
+<Preview>
+  <Story name="Example">
+    {() => html`
+      <t-card>
+        <h3 slot="t-card-head">Lorem ipsum dolor sit.</h3>
+        <div>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus officiis molestias a sed. Impedit eius ducimus facere saepe in, accusamus quas consectetur minima neque recusandae aliquam voluptatibus sit architecto id?</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+          <t-button-group>
+            <t-button>
+              Save
+            </t-button>
+            <t-button iconOnly="true" theme="secondary">
+              <t-icon glyph="delete"></t-icon>
+            </t-button>
+          </t-button-group>
+        </div>
+      </t-card>
+    `}
+  </Story>
+</Preview>
