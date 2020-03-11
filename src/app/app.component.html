@@ -1,14 +1,17 @@
-<h2>ANGULAR + WEB COMPONENTS</h2>
-<form [formGroup]="form">
-  <t-input (keydown.enter)="addEl()" appCustomInput [formControl]="form.controls.input"></t-input>
-  <t-button (click)="addEl()">
-    Lisa
-  </t-button>
-  <t-button theme="link" (click)="clearEl()">
-    Tühjenda
-  </t-button>
-  <t-toggle></t-toggle>
-  <div *ngFor="let el of elementList">
-    {{el}}
-  </div>
-</form>
+<t-card>
+  <h3 slot="t-card-header">Angular + web components</h3>
+  <form [formGroup]="form">
+    <t-input (keydown.enter)="addEl()" appCustomInput [formControl]="form.controls.input"></t-input>
+    <t-button-group>
+      <t-button (click)="addEl()">
+        Add
+      </t-button>
+      <t-button theme="secondary" (click)="clearEl()">
+        Empty
+      </t-button>
+    </t-button-group>
+    <div *ngFor="let el of elementList">
+      {{el}}
+    </div>
+  </form>
+</t-card>
