@@ -79,7 +79,10 @@ let TToggle = class TToggle extends LitElement {
             't-toggle--off': this.inputValue === false,
         };
         return html `
-      <button @click=${(e) => { this.valueChanged(e); }} class=${classMap(this.classes)}>
+      <button
+        @click=${(e) => { this.valueChanged(e); }}
+        class=${classMap(this.classes)}
+      >
         <div class="t-toggle__thumb"></div>
       </button>
     `;
