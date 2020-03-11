@@ -20,4 +20,8 @@ export class AppComponent {
     this.elementList = [...this.elementList, this.form.value.input];
     this.form.controls.input.reset();
   }
+
+  public clearEl() {
+    this.elementList = [];
+  }
 }

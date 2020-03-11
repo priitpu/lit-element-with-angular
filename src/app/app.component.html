@@ -4,4 +4,10 @@
   <t-button (click)="addEl()">
     Lisa
   </t-button>
+  <t-button theme="link" (click)="clearEl()">
+    Tühjenda
+  </t-button>
+  <div *ngFor="let el of elementList">
+    {{el}}
+  </div>
 </form>
