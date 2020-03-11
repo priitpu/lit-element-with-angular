@@ -1,5 +1,5 @@
 <t-card>
-  <h3 slot="t-card-header">Angular + web components</h3>
+  <h3 slot="t-card-head">Angular + web components</h3>
   <form [formGroup]="form">
     <t-input (keydown.enter)="addEl()" appCustomInput [formControl]="form.controls.input"></t-input>
     <t-button-group>
@@ -10,8 +10,10 @@
         Empty
       </t-button>
     </t-button-group>
-    <div *ngFor="let el of elementList">
-      {{el}}
-    </div>
   </form>
+</t-card>
+<t-card>
+  <div *ngFor="let el of elementList">
+    {{el}}
+  </div>
 </t-card>
