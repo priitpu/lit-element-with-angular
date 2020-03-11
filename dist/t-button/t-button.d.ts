@@ -6,7 +6,7 @@ export declare class TButton extends LitElement {
     iconLeft: string;
     iconRight: string;
     iconOnly: boolean;
-    private classes;
+    classes: {};
     static get styles(): import("lit-element").CSSResult;
     render(): import("lit-element").TemplateResult;
 }

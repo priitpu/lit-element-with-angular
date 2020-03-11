@@ -68,6 +68,30 @@
           "attribute": "iconOnly",
           "type": "boolean",
           "default": "false"
+        },
+        {
+          "name": "classes",
+          "type": "object",
+          "default": "{}"
+        }
+      ]
+    },
+    {
+      "name": "t-icon",
+      "path": "./src/elements/t-icon/t-icon.ts",
+      "attributes": [
+        {
+          "name": "glyph",
+          "type": "string",
+          "default": "\"info\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "glyph",
+          "attribute": "glyph",
+          "type": "string",
+          "default": "\"info\""
         }
       ]
     },
@@ -106,21 +130,25 @@
       ]
     },
     {
-      "name": "t-icon",
-      "path": "./src/elements/t-icon/t-icon.ts",
+      "name": "t-toggle",
+      "path": "./src/elements/t-toggle/t-toggle.ts",
       "attributes": [
         {
-          "name": "glyph",
-          "type": "string",
-          "default": "\"info\""
+          "name": "inputValue",
+          "type": "boolean",
+          "default": "false"
         }
       ],
       "properties": [
         {
-          "name": "glyph",
-          "attribute": "glyph",
-          "type": "string",
-          "default": "\"info\""
+          "name": "inputValue",
+          "attribute": "inputValue",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "value",
+          "type": "boolean"
         }
       ]
     }

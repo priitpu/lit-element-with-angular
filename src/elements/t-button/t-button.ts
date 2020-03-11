@@ -9,7 +9,7 @@ export class TButton extends LitElement {
   @property({ type: String }) iconLeft: string = '';
   @property({ type: String }) iconRight: string = '';
   @property({ type: Boolean }) iconOnly: boolean = false;
-  private classes = {};
+  public classes = {};
   static get styles() {
     return css`
       .btn {
