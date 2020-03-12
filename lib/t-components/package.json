@@ -35,7 +35,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6009",
     "build-storybook": "build-storybook",
-    "stonks": "tsc && rollup -c && git commit . -m stonks && git push && echo \"Stonks\"",
+    "compile": "tsc && rollup -c",
     "analyse": "wca analyze src --format json --outFile custom-elements.json"
   },
   "repository": {
