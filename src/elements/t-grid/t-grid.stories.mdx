@@ -11,65 +11,135 @@ import "../t-grid-cell/t-grid-cell.ts";
 <Preview>
   <Story name="Base">
     {() => html`
-      <div style="background-color:#ECF0F2">
+      <div style="background-color:#ECF0F2; padding: 16px;">
         <t-grid>
-          <t-grid-row cols="4">
-            <t-grid-cell span="2">
-              <t-card>
-                <h3 slot="t-card-head">
-                  Some header text 1
-                </h3>
-                <t-grid>
-                  <t-grid-row>
-                    <t-grid-cell>
-                      <p>Hello</p>
-                    </t-grid-cell>
-                  </t-grid-row>
-                  <t-grid-row>
-                    <t-grid-cell start="7" span="6" justify="end">
-                      <t-button-group>
-                        <t-button>Positive</t-button>
-                        <t-button theme="secondary">Negative</t-button>
-                      </t-button-group>
-                    </t-grid-cell>
-                  </t-grid-row>
-                </t-grid>
-              </t-card>
+          <t-grid-row>
+            <t-grid-cell span="12">
+              <t-card><h3 slot="t-card-head">12</h3></t-card>
             </t-grid-cell>
           </t-grid-row>
-          <t-grid-row cols="4">
-            <t-grid-cell start="3" span="2">
-              <t-card>
-                <h3 slot="t-card-head">Lorem ipsum dolor sit.</h3>
-                <t-grid>
-                  <t-grid-row cols="1">
-                    <t-grid-cell>
-                      <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing
-                        elit. Voluptatibus officiis molestias a sed. Impedit
-                        eius ducimus facere saepe in, accusamus quas consectetur
-                        minima neque recusandae aliquam voluptatibus sit
-                        architecto id?
-                      </p>
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing.
-                      </p>
-                    </t-grid-cell>
-                  </t-grid-row>
-                  <t-grid-row>
-                    <t-grid-cell start="9" justify="end" span="4">
-                      <t-button-group>
-                        <t-button>
-                          Save
-                        </t-button>
-                        <t-button iconOnly="true" theme="secondary">
-                          <t-icon glyph="delete"></t-icon>
-                        </t-button>
-                      </t-button-group>
-                    </t-grid-cell>
-                  </t-grid-row>
-                </t-grid>
-              </t-card>
+          <t-grid-row>
+            <t-grid-cell span="6">
+              <t-card><h3 slot="t-card-head">6</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="6">
+              <t-card><h3 slot="t-card-head">6</h3></t-card>
+            </t-grid-cell>
+          </t-grid-row>
+          <t-grid-row>
+            <t-grid-cell span="4">
+              <t-card><h3 slot="t-card-head">4</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="4">
+              <t-card><h3 slot="t-card-head">4</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="4">
+              <t-card><h3 slot="t-card-head">4</h3></t-card>
+            </t-grid-cell>
+          </t-grid-row>
+          <t-grid-row>
+            <t-grid-cell span="3">
+              <t-card><h3 slot="t-card-head">3</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="3">
+              <t-card><h3 slot="t-card-head">3</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="3">
+              <t-card><h3 slot="t-card-head">3</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="3">
+              <t-card><h3 slot="t-card-head">3</h3></t-card>
+            </t-grid-cell>
+          </t-grid-row>
+          <t-grid-row>
+            <t-grid-cell span="12">
+              <t-card><h3 slot="t-card-head">12</h3></t-card>
+            </t-grid-cell>
+          </t-grid-row>
+          <t-grid-row>
+            <t-grid-cell span="2">
+              <t-card><h3 slot="t-card-head">2</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="2">
+              <t-card><h3 slot="t-card-head">2</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="2">
+              <t-card><h3 slot="t-card-head">2</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="2">
+              <t-card><h3 slot="t-card-head">2</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="2">
+              <t-card><h3 slot="t-card-head">2</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="2">
+              <t-card><h3 slot="t-card-head">2</h3></t-card>
+            </t-grid-cell>
+          </t-grid-row>
+          <t-grid-row>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+          </t-grid-row>
+          <t-grid-row>
+            <t-grid-cell span="6">
+              <t-card><h3 slot="t-card-head">6</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="3">
+              <t-card><h3 slot="t-card-head">3</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="3">
+              <t-card><h3 slot="t-card-head">3</h3></t-card>
+            </t-grid-cell>
+          </t-grid-row>
+          <t-grid-row>
+            <t-grid-cell span="2">
+              <t-card><h3 slot="t-card-head">2</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="6">
+              <t-card><h3 slot="t-card-head">6</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="1">
+              <t-card><h3 slot="t-card-head">1</h3></t-card>
+            </t-grid-cell>
+            <t-grid-cell span="2">
+              <t-card><h3 slot="t-card-head">2</h3></t-card>
             </t-grid-cell>
           </t-grid-row>
         </t-grid>

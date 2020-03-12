@@ -1,7 +1,6 @@
 import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
 import { html } from 'lit-html';
 import './t-input.ts';
-// import '../t-icon/t-icon.ts'
 
 <Meta title="Inputs|Text" component='t-input' />
 
@@ -26,22 +25,3 @@ import './t-input.ts';
     `}
   </Story>
 </Preview>
-
-<Preview>
-  <Story name="sm with label">
-    {() => html`
-      <t-input size="sm">?Label</t-input>
-    `}
-  </Story>
-  <Story name="md with label">
-    {() => html`
-      <t-input>?Label</t-input>
-    `}
-  </Story>
-  <Story name="lg with label">
-    {() => html`
-      <t-input size="lg">?Label</t-input>
-    `}
-  </Story>
-</Preview>
-

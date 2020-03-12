@@ -12,6 +12,9 @@ export class TInput extends LitElement {
       :host {
         display: flex;
       }
+      .t-input {
+        width: 100%;
+      }
       .t-input input {
         box-sizing: border-box;
         border-radius: 4px;
@@ -20,6 +23,7 @@ export class TInput extends LitElement {
         font-size: 14px;
         background-color: #ffffff;
         height: 32px;
+        width: 100%;
       }
       .t-input input:hover {
         border: 1px solid #3F3F3F;
