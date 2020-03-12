@@ -25,7 +25,6 @@ export class TToggle extends LitElement {
         position: relative;
         padding: 0px 2px;
         display: flex;
-        align-itetms: center;
         transition: background-color 0.2s linear;
       }
       .t-toggle:hover {
@@ -43,7 +42,7 @@ export class TToggle extends LitElement {
         display: inline-block;
       }
       .t-toggle--on {
-        background-color: #EC1A2E;
+        background-color: yellow;
       }
       .t-toggle--on .t-toggle__thumb {
         left: 50%;
@@ -77,6 +76,18 @@ export class TToggle extends LitElement {
       't-toggle--off': this.inputValue === false,
     };
     return html`
+      <button
+        @click=${(e: Event) => { this.valueChanged(e) }}
+        class=${classMap(this.classes)}
+      >
+        <div class="t-toggle__thumb"></div>
+      </button>
+      <button
+        @click=${(e: Event) => { this.valueChanged(e) }}
+        class=${classMap(this.classes)}
+      >
+        <div class="t-toggle__thumb"></div>
+      </button>
       <button
         @click=${(e: Event) => { this.valueChanged(e) }}
         class=${classMap(this.classes)}
