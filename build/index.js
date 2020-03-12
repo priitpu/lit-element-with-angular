@@ -3388,22 +3388,6 @@ let TToggle = class TToggle extends LitElement {
       >
         <div class="t-toggle__thumb"></div>
       </button>
-      <button
-        @click=${e => {
-      this.valueChanged(e);
-    }}
-        class=${classMap(this.classes)}
-      >
-        <div class="t-toggle__thumb"></div>
-      </button>
-      <button
-        @click=${e => {
-      this.valueChanged(e);
-    }}
-        class=${classMap(this.classes)}
-      >
-        <div class="t-toggle__thumb"></div>
-      </button>
     `;
   }
 
