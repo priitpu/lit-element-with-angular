@@ -12,6 +12,7 @@ export class AppComponent {
   ) {
   }
   public elementList = [];
+  public toggleValue = false;
   public form = this.fb.group({
     input: [''],
   });
@@ -20,8 +21,12 @@ export class AppComponent {
     this.elementList = [...this.elementList, this.form.value.input];
     this.form.controls.input.reset();
   }
-
   public clearEl() {
     this.elementList = [];
+  }
+
+  public toggleThings(e: Event) {
+    const target = e.target as any;
+    this.toggleValue = target.value;
   }
 }

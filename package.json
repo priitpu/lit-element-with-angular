@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "yass": "git subtree pull --prefix lib/t-components https://github.com/priitpu/lit-element-web-components.git master --squash"
+    "components": "git subtree pull --prefix lib/t-components https://github.com/priitpu/lit-element-web-components.git master --squash"
   },
   "private": true,
   "dependencies": {
