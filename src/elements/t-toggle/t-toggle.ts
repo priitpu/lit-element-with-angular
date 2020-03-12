@@ -42,7 +42,7 @@ export class TToggle extends LitElement {
         display: inline-block;
       }
       .t-toggle--on {
-        background-color: yellow;
+        background-color: #EC1A2E;
       }
       .t-toggle--on .t-toggle__thumb {
         left: 50%;

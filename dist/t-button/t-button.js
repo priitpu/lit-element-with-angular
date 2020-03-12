@@ -109,7 +109,7 @@ let TButton = class TButton extends LitElement {
         return html `
       <button class="${classMap(this.classes)}">
         <span class="l-icon"><slot name="l-icon"></slot></span>
-        <h2><slot></slot></h2>
+        <span><slot></slot></span>
         <span class="r-icon"><slot name="r-icon"></slot></span>
       </button>
     `;
