@@ -101,7 +101,7 @@ export class TButton extends LitElement {
     return html`
       <button class="${classMap(this.classes)}">
         <span class="l-icon"><slot name="l-icon"></slot></span>
-        <h1><slot></slot></h1>
+        <span><slot></slot></span>
         <span class="r-icon"><slot name="r-icon"></slot></span>
       </button>
     `;
